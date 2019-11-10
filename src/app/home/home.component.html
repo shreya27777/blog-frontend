@@ -1,1 +1,75 @@
-<p>home works!</p>
+<app-navbar></app-navbar>
+<nav class="navbar navbar-expand-lg bg-white justify-content-center navbar-dark p-0 my-shadow mb-5">
+  <div class="py-2 px-5 category-style">
+    <h4><a routerLink="/home" class="text-dark text-decoration-none">Home</a></h4>
+  </div>
+  <div *ngFor="let i of category" class="py-2 px-5 category-style my-cursor">
+    <div>
+      <h4><a (click)="show(i)" class="text-black text-decoration-none">
+        {{i}}</a></h4>
+    </div>
+  </div>
+</nav>
+
+<div class="cm fontSize1 color2 text-center ">Get smarter about what matters to you.</div>
+<div class="d-flex justify-content-center pt-5">
+  <img src="https://cdn-images-1.medium.com/proxy/1*vAvULJPUoFIVXyHQZ4obxg.gif">
+</div>
+<div class="d-flex justify-content-center pt-5">
+  <div class="col-sm-6">
+    <div class="d-flex justify-content-center">
+      <div class="cm cn cs">120 million curious readers and growing every day.</div>
+
+    </div>
+  </div>
+  <div class="col-sm-5 color1">
+    <div class="pb-5">
+      <i class="fa fa-quote-left fontSize1 my-color"></i>
+    </div>
+    <div id="demo" class="carousel slide " data-ride="carousel ">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active bg-success"></li>
+        <li data-target="#demo" class="active bg-success " data-slide-to="1"></li>
+        <li data-target="#demo" class="active bg-success" data-slide-to="2"></li>
+        <li data-target="#demo" class="active bg-success" data-slide-to="3"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active ">
+          <h3>Do yourself a favor and start browsing Medium for high
+            quality articles on just about ANY topic. Get those mental gears turning!</h3>
+        </div>
+        <div class="carousel-item ">
+          <h3>
+            Medium is trying to shift the paradigm. They’re catering to those
+            looking for fresh, new, authentic voices. I believe wholeheartedly in their mission.</h3>
+        </div>
+        <div class="carousel-item ">
+          <h3>
+            In a web full of pseudo thought-leaders, Medium is the one place that
+            I can reliably come to and be better informed in the easiest way possible of the things that matter to
+            me.</h3>
+        </div>
+        <div class="carousel-item">
+          <h3> Medium is a great place to read and learn from a wide range of authors.
+            It’s not muddied up by ads. It’s not fake news. It feels like one of the few pure places to go online.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br><div class="d-flex justify-content-around pb-4">
+  <div class="pr-5"><img src="https://cdn-images-1.medium.com/max/1000/1*a9dZ9L0vZrDQDrM0dHlXqg.png"></div>
+  <div class="fontSize1  cm cn pt-5"><div class="text-center">Expand your reading.</div>
+    <div class="text-center">Expand your mind.</div>
+  <div class="text-center fontSize3">BLOGGERS.COM</div></div>
+</div>
+<!--<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>-->
+
+<!--<img src="https://cdn-images-1.medium.com/max/726/1*vZ8miTqyE3eUnBqQjvLJeA.png">-->
+
+<app-footer></app-footer>

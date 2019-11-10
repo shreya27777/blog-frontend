@@ -1,1 +1,65 @@
-<p>navbar works!</p>
+<nav class="px-4 py-lg-3 navbar navbar-expand-lg bg-white navbar-dark  sticky-top shadow-lg">
+  <h2 class=" my-cursor" routerLink="/home">
+    My Blog<i class="material-icons text-danger">
+    favorite
+  </i>
+  </h2>
+  <div id="topnav" class="form-inline px-auto mx-auto">
+    <input class="form-control" type="text" placeholder="Search" size="72" [(ngModel)]="search" name="search">
+    <button type="submit" (click)="startSearch()" class="text-dark text-light "><i class="fa fa-search"></i>
+    </button>
+  </div>
+
+  <div class="d-flex align-items-center my-cursor">
+
+
+    <div *ngIf="!appService.checkLogin(); else logOut" class="px-2 d-flex align-items-center category-style">
+      <h5><a routerLink="/login" class=" text-dark px-1 text-decoration-none py-2 he">Log In</a>
+        <i class="material-icons text-black">
+          account_circle
+        </i></h5>
+    </div>
+
+    <ng-template #logOut>
+      <div class="px-2 d-flex align-items-center category-style">
+        <h5><a (click)="logout()" class=" text-black px-1 text-decoration-none py-2">LogOut</a>
+          <i class="material-icons text-black">
+            account_circle
+          </i></h5>
+      </div>
+    </ng-template>
+
+    <div *ngIf="appService.checkAdmin(); else User" class="dropdown px-2 category-style">
+      <button class="dropbtn">Actions</button>
+      <i class="material-icons text-black">
+        shopping_cart
+      </i>
+      <div class="dropdown-content ">
+        <a routerLink="/add-product">Add Product</a>
+        <a routerLink="/list-of-user">List Of users</a>
+      </div>
+    </div>
+    <ng-template #User>
+      <div class="px-2 d-flex align-items-center category-style">
+        <h5><a routerLink="/user-cart" class="text-dark  px-1 text-decoration-none py-2">Cart</a>
+          <i class="material-icons text-black">
+            shopping_cart
+          </i></h5>
+      </div>
+    </ng-template>
+
+    <div class="dropdown px-2 category-style">
+      <button class="dropbtn">Account</button>
+      <i class="material-icons text-black">
+        supervisor_account
+      </i>
+      <div class="dropdown-content ">
+        <a routerLink="/myProfile">My Profile</a>
+        <a routerLink="/orders">My Orders</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+

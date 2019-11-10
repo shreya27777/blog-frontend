@@ -1,0 +1,39 @@
+h2,h3{
+  font-family: 'Sofia', cursive;
+}
+.heading{
+  margin: 0 20rem;
+  border-bottom: 3px solid #ca3e47;
+}
+#item img {
+  width: 100px;
+  height: 100px;
+}
+
+.my-cursor{
+  cursor: pointer;
+}
+
+.form-control{
+  width: 17rem;
+}
+
+.btn{
+  width: 20rem;
+}
+.bg1{
+  height: 40%;
+  width: 50%;
+}
+.topleft {
+  position: absolute;
+  top: 80px;
+  left: 16px;
+  font-size: 18px;
+}
+
+
+.my-bg {
+  position: absolute;
+  left: 0;
+}

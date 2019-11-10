@@ -1,1 +1,64 @@
-<p>login works!</p>
+<div>
+<div class="container-fluid">
+  <div class="my-bg">
+    <img class="bg1" src="https://cdn-images-1.medium.com/fit/c/1400/1120/1*vkb5Uy8MTbBZbtBc4aZwMA.jpeg">
+  </div>
+  <div class="d-flex justify-content-center align-items-center heading pt-5" routerLink="/home">
+    <div id="item" class="my-cursor">
+      <img src="./assets/logo.jpg" alt="Shoppers Bazaar">
+    </div>
+    <div>
+      <h2 class="display-3 text-center m-0 my-cursor">My Blog</h2>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mt-5">
+    <div class="p-3 border pl-5 pr-5">
+      <form class="text-center">
+        <h2 class=" text-center mb-4">Login here</h2>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+              > <i class="material-icons">person</i></span>
+            </div>
+            <input type="text" class="form-control " placeholder="Username" [(ngModel)]="username"
+                   [ngModelOptions]="{standalone: true}"/>
+          </div>
+        </div>
+        <div *ngIf="usernameEmpty">
+          <h5 class="text-danger">username is required</h5>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group pt-2">
+            <div class="input-group-prepend">3
+              <span class="input-group-text"><i class="material-icons">vpn_key</i></span>
+            </div>
+            <input [type]="showPassword" class="form-control" placeholder="Password" [(ngModel)]="password"
+                   [ngModelOptions]="{standalone: true}"/>
+          </div>
+        </div>
+        <div *ngIf="passwordEmpty">
+          <h5 class="text-danger">password is required</h5>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" (click)="showPass()"/>
+          <label class="custom-control-label" for="customCheck"
+          >Show Password:</label>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-danger form-control mt-2" (click)="login()">Login
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="text-center container mt-4 text-decoration-none">
+    Don't have an account?
+    <a routerLink="/signup">Sign Up</a> here!
+  </div>
+</div>
+</div>
