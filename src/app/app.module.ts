@@ -10,6 +10,11 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { AddPostComponent } from './add-post/add-post.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
+import { NewsFeedComponent } from './news-feed/news-feed.component';
+
+import { PostDetailsComponent } from './post-details/post-details.component';
+import { MyPostsComponent } from './my-posts/my-posts.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 
 @NgModule({
@@ -21,6 +26,10 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     HomeComponent,
     AddPostComponent,
     MyProfileComponent,
+    NewsFeedComponent,
+    PostDetailsComponent,
+    MyPostsComponent,
+    EditPostComponent,
   ],
   imports: [
     HttpClientModule,

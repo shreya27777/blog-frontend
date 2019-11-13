@@ -1,4 +1,4 @@
-<nav class="px-4 py-lg-3 navbar navbar-expand-lg bg-white navbar-dark  sticky-top shadow-lg">
+<nav class="navbar navbar-expand-lg my-bg sticky-top ">
   <h2 class=" my-cursor" routerLink="/home">
     My Blog<i class="material-icons text-danger">
     favorite
@@ -41,9 +41,9 @@
     </div>
     <ng-template #User>
       <div class="px-2 d-flex align-items-center category-style">
-        <h5><a routerLink="/user-cart" class="text-dark  px-1 text-decoration-none py-2">Cart</a>
+        <h5><a routerLink="/newsFeed" class="text-dark  px-1 text-decoration-none py-2">Blogs</a>
           <i class="material-icons text-black">
-            shopping_cart
+            dashboard
           </i></h5>
       </div>
     </ng-template>
@@ -55,7 +55,8 @@
       </i>
       <div class="dropdown-content ">
         <a routerLink="/myProfile">My Profile</a>
-        <a routerLink="/orders">My Orders</a>
+        <a routerLink="/my-posts">My Posts</a>
+        <a routerLink="/orders">My Groups</a>
       </div>
     </div>
 

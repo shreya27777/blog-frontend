@@ -1,75 +1,70 @@
-<!--<div class="sizee"><img src="./assets/office.jpg"></div>-->
-<div class="container">
-  <img  class="sizee" src="https://wallpaperaccess.com/full/279547.jpg">
 
-
-<div class="centered">
-<div class="container-fluid">
-  <div class="d-flex justify-content-center align-items-center heading pt-5" routerLink="/home">
-    <div id="item" class="my-cursor">
-      <img src="./assets/logo.jpg" alt="Shoppers Bazaar">
-    </div>
-    <div>
-      <h2 class="display-3 text-center m-0 my-cursor">My Blog</h2>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center mt-5">
-    <div class="p-3 border pl-5 pr-5">
-      <form class="text-center">
-        <h3 class=" text-center mb-4">Sign-up here</h3>
-        <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"
-              > <i class="material-icons">person</i></span>
-            </div>
-            <input type="text" class="form-control " placeholder="Username" [(ngModel)]="name"
-                   [ngModelOptions]="{standalone: true}"/>
-          </div>
-        </div>
-        <div *ngIf="usernameEmpty">
-          <h5 class="text-danger">username is required</h5>
-        </div>
-
-
-        <div class="form-group">
-          <div class="input-group pt-2">
-            <div class="input-group-prepend">
-              <span class="input-group-text"
-              > <i class="material-icons">email</i></span>
-            </div>
-            <input type="text" class="form-control " placeholder="email" [(ngModel)]="email"
-                   [ngModelOptions]="{standalone: true}"/>
-          </div>
-        </div>
-        <div *ngIf="emailEmpty">
-          <h5 class="text-danger">email is required</h5>
-        </div>
-
-        <div class="form-group">
-          <div class="input-group pt-2">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="material-icons">vpn_key</i></span>
-            </div>
-            <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password"
-                   [ngModelOptions]="{standalone: true}"/>
-          </div>
-        </div>
-        <div *ngIf="passwordEmpty">
-          <h5 class="text-danger">password is required</h5>
-        </div>
-
-        <button
-          type="button"
-          class="btn btn-danger form-control mt-2" (click)="Signupdata()">Signup</button>
-      </form>
-    </div>
+<app-navbar></app-navbar>
+<div>
+  <div class="my-pos">
+    <img src="https://cdn-images-1.medium.com/max/500/1*VAs7h16W2sZkFtue1GnnaQ.png">
   </div>
 
-  <div class="text-center container mt-4 text-decoration-none" >
-    Already have an account?
-    <a  routerLink="/login">Login</a > here!
+  <div class="pos">
+    <div class="card bgf">
+      <div class="d-flex justify-content-center ">
+        <div class="p-3  pl-5 pr-5">
+          <form class="text-center">
+            <h2 class="text-center mb-4 cm pq">Signup here</h2>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend ">
+              <span class="input-group-text "
+              > <i class="material-icons ">person</i></span>
+                </div>
+                <input type="text" class="form-control " placeholder="name" [(ngModel)]="name"
+                       [ngModelOptions]="{standalone: true}"/>
+              </div>
+            </div>
+            <div *ngIf="usernameEmpty">
+              <h5 class="text-danger">username is required</h5>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group pt-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text "><i class="material-icons ">email</i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="email" [(ngModel)]="email"
+                       [ngModelOptions]="{standalone: true}"/>
+              </div>
+            </div>
+            <div *ngIf="emailEmpty">
+              <h5 class="text-danger">email is required</h5>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group pt-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="material-icons">vpn_key</i></span>
+                </div>
+                <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password"
+                       [ngModelOptions]="{standalone: true}"/>
+              </div>
+            </div>
+            <div *ngIf="passwordEmpty">
+              <h5 class="text-danger">password is required</h5>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline-danger form-control mt-2" (click)="Signupdata()">Signup
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center container mt-2 text-decoration-none">
+        Already have an account?
+        <a routerLink="/login">Login</a> here!
+      </div>
+    </div>
   </div>
+
 </div>
-</div>
-</div>
+<!--</div>-->
+<!--https://cdn-images-1.medium.com/fit/c/1400/1120/1*vkb5Uy8MTbBZbtBc4aZwMA.jpeg-->

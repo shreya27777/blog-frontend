@@ -1,39 +1,57 @@
-h2,h3{
-  font-family: 'Sofia', cursive;
-}
-.heading{
-  margin: 0 20rem;
-  border-bottom: 3px solid #ca3e47;
-}
-#item img {
-  width: 100px;
-  height: 100px;
+.cm {
+  font-family: medium-marketing-display-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.my-cursor{
-  cursor: pointer;
+.form-control {
+  width: 18rem;
 }
 
-.form-control{
-  width: 17rem;
+.btn {
+  width: 19rem;
 }
 
-.btn{
-  width: 20rem;
+.bg1 {
+  height: 90%;
+  width: 900px;
 }
-.bg1{
-  height: 40%;
-  width: 50%;
-}
-.topleft {
+
+.my-pos {
   position: absolute;
-  top: 80px;
-  left: 16px;
-  font-size: 18px;
+  right: 43%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
 }
 
+.my-pos img {
+  height: 100%;
+  width: 100%;
+}
+.pq{
+  border-bottom-color: #ca3e47;
 
-.my-bg {
+}
+.pos {
   position: absolute;
-  left: 0;
+  right: 15%;
+  top: 10rem;
+}
+
+.bgf {
+  z-index: 1;
+  background-color:#e0f7fa;
+
+  height: 400px;
+  width: 520px;
+}
+
+.card {
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+.my-color {
+  color: rgba(3, 168, 124, 1);
 }

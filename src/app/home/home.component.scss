@@ -1,6 +1,6 @@
-
-.category-style:hover {
-  border-bottom: 2px solid #ca3e47;
+.zz{
+  width: 65%;
+  height: 67%;
 }
 
 //
@@ -24,18 +24,19 @@
 .color1 {
   background-color: rgba(12, 242, 143, 0.2);
 }
-
+.sizee{
+  width: 10px;
+  height: 10px;
+}
 .color2 {
   background-color: hsla(9, 100%, 64%, 0.5);
 }
 
 .cm {
+  font-weight: 500;
   font-family: medium-marketing-display-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.cs {
-  font-size: 4rem;
-}
 
 .cn {
   font-weight: 500;
@@ -47,12 +48,21 @@
 }
 
 .fontSize1 {
-  font-size: 50px;
+  font-size: 55px;
 }
 .fontSize3 {
-  font-size: 70px;
+  font-size: 80px;
 }
-
+.fontSize2 {
+  font-size: 20px;
+}
 .carousel-inner {
   height: 18rem;
+}
+.hq{
+  width: 20%;
+  height: 40%;
+}
+.bga{
+  background-color: rgba(3, 168, 124, 1);
 }
