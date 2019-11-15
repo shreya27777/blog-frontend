@@ -9,6 +9,10 @@ import {NewsFeedComponent} from './news-feed/news-feed.component';
 import {PostDetailsComponent} from './post-details/post-details.component';
 import {MyPostsComponent} from './my-posts/my-posts.component';
 import {EditPostComponent} from './edit-post/edit-post.component';
+import {SearchComponent} from './search/search.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {FollowComponent} from './follow/follow.component';
+import {AllPostsofUserComponent} from './all-postsof-user/all-postsof-user.component';
 
 
 const routes: Routes = [
@@ -21,7 +25,11 @@ const routes: Routes = [
   {path: 'newsFeed', component: NewsFeedComponent},
   {path: 'post-details/:id', component: PostDetailsComponent},
   {path: 'my-posts' , component: MyPostsComponent},
-  {path: 'edit-post/:id' , component: EditPostComponent}
+  {path: 'edit-post/:id' , component: EditPostComponent},
+  {path: 'search/:q' , component: SearchComponent},
+  {path: 'follow' , component: FollowComponent},
+  {path: 'allPostOfUser/:id' , component: AllPostsofUserComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
@@ -32,5 +40,6 @@ export class AppRoutingModule {
 }
 
 export const RoutingComponents = [LoginComponent, SignupComponent, HomeComponent, AddPostComponent, MyProfileComponent,
-  NewsFeedComponent, PostDetailsComponent , MyPostsComponent , EditPostComponent
+  NewsFeedComponent, PostDetailsComponent , MyPostsComponent , EditPostComponent , SearchComponent , PageNotFoundComponent
+  , FollowComponent , AllPostsofUserComponent
 ];

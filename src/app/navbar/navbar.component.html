@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg my-bg sticky-top ">
-  <h2 class=" my-cursor" routerLink="/home">
-    My Blog<i class="material-icons text-danger">
+<nav class="navbar navbar-expand-lg my-bg sticky-top border-bottom">
+  <h2 class=" my-cursor cm" routerLink="/home">
+    Scribble<i class="material-icons text-danger">
     favorite
   </i>
   </h2>
   <div id="topnav" class="form-inline px-auto mx-auto">
-    <input class="form-control" type="text" placeholder="Search" size="72" [(ngModel)]="search" name="search">
+    <input class="form-control" type="text" placeholder="Search" size="50" [(ngModel)]="search" name="search">
     <button type="submit" (click)="startSearch()" class="text-dark text-light "><i class="fa fa-search"></i>
     </button>
   </div>
@@ -14,7 +14,7 @@
 
 
     <div *ngIf="!appService.checkLogin(); else logOut" class="px-2 d-flex align-items-center category-style">
-      <h5><a routerLink="/login" class=" text-dark px-1 text-decoration-none py-2 he">Log In</a>
+      <h5><a routerLink="/login" class=" text-dark px-1 text-decoration-none py-2 he cm">Log In</a>
         <i class="material-icons text-black">
           account_circle
         </i></h5>
@@ -22,7 +22,7 @@
 
     <ng-template #logOut>
       <div class="px-2 d-flex align-items-center category-style">
-        <h5><a (click)="logout()" class=" text-black px-1 text-decoration-none py-2">LogOut</a>
+        <h5><a (click)="logout()" class=" text-black px-1 text-decoration-none py-2 cm">LogOut</a>
           <i class="material-icons text-black">
             account_circle
           </i></h5>
@@ -41,7 +41,7 @@
     </div>
     <ng-template #User>
       <div class="px-2 d-flex align-items-center category-style">
-        <h5><a routerLink="/newsFeed" class="text-dark  px-1 text-decoration-none py-2">Blogs</a>
+        <h5><a routerLink="/newsFeed" class="text-dark  px-1 text-decoration-none py-2 cm">Blogs</a>
           <i class="material-icons text-black">
             dashboard
           </i></h5>
@@ -49,14 +49,15 @@
     </ng-template>
 
     <div class="dropdown px-2 category-style">
-      <button class="dropbtn">Account</button>
+      <button class="dropbtn cm ">Account</button>
       <i class="material-icons text-black">
         supervisor_account
       </i>
       <div class="dropdown-content ">
-        <a routerLink="/myProfile">My Profile</a>
-        <a routerLink="/my-posts">My Posts</a>
-        <a routerLink="/orders">My Groups</a>
+        <a class="cm" routerLink="/addPost">Add Post</a>
+        <a class="cm" routerLink="/myProfile">My Profile</a>
+        <a class="cm" routerLink="/my-posts">My Posts</a>
+        <a class="cm" routerLink="/orders">My Groups</a>
       </div>
     </div>
 

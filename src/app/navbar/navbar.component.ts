@@ -1,10 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-// import {ProductService} from '../product.service';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {AppService} from '../app.service';
 import {AuthenticationService} from '../authentication.service';
 import {HttpClient} from '@angular/common/http';
-// import {HttpService} from '../http.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -15,16 +14,10 @@ export class NavbarComponent implements OnInit {
 
   private search;
 
-  public category = [
-    {link: '/product-list', name: 'Decor'},
-    {link: '/product-list', name: 'Clothing'},
-    {link: '/product-list', name: 'Electronics'},
-    {link: '/product-list', name: 'Footwear'},
-    {link: '/product-list', name: 'Beauty'}
-  ];
+
 
   constructor(private router: Router, private appService: AppService,
-              private authService: AuthenticationService, private http: HttpClient, ) {
+              private authService: AuthenticationService, private http: HttpClient, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -33,6 +26,9 @@ export class NavbarComponent implements OnInit {
     } else {
       this.search = localStorage.getItem('search');
     }
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.search = params.get('q');
+    });
   }
 
 
@@ -45,5 +41,9 @@ export class NavbarComponent implements OnInit {
       alert('Logout Successful');
       this.router.navigate(['/home']);
     });
+  }
+
+  startSearch() {
+    this.router.navigate(['/search', this.search]);
   }
 }

@@ -1,8 +1,8 @@
-
 <app-navbar></app-navbar>
 <div>
-  <div class="my-pos">
-    <img src="https://cdn-images-1.medium.com/max/500/1*VAs7h16W2sZkFtue1GnnaQ.png">
+  <div>
+    <img class="my-pos"
+         src="https://66.media.tumblr.com/e98efc52c54d8c22b67514dd225e443d/tumblr_p9ox8kuydk1qhttpto7_540.jpg">
   </div>
 
   <div class="pos">
@@ -11,6 +11,9 @@
         <div class="p-3  pl-5 pr-5">
           <form class="text-center">
             <h2 class="text-center mb-4 cm pq">Signup here</h2>
+            <div *ngIf="!exists">
+              <div class="text-center text-danger pb-2">User already exists</div>
+            </div>
             <div class="form-group">
               <div class="input-group">
                 <div class="input-group-prepend ">

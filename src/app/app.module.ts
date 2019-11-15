@@ -5,17 +5,10 @@ import {AppRoutingModule, RoutingComponents} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {FooterComponent} from './footer/footer.component';
-import {HomeComponent} from './home/home.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { AddPostComponent } from './add-post/add-post.component';
-import { MyProfileComponent } from './my-profile/my-profile.component';
-import { NewsFeedComponent } from './news-feed/news-feed.component';
-
-import { PostDetailsComponent } from './post-details/post-details.component';
-import { MyPostsComponent } from './my-posts/my-posts.component';
-import { EditPostComponent } from './edit-post/edit-post.component';
-
+import { FollowComponent } from './follow/follow.component';
+import { AllPostsofUserComponent } from './all-postsof-user/all-postsof-user.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +16,8 @@ import { EditPostComponent } from './edit-post/edit-post.component';
     RoutingComponents,
     NavbarComponent,
     FooterComponent,
-    HomeComponent,
-    AddPostComponent,
-    MyProfileComponent,
-    NewsFeedComponent,
-    PostDetailsComponent,
-    MyPostsComponent,
-    EditPostComponent,
+    FollowComponent,
+    AllPostsofUserComponent
   ],
   imports: [
     HttpClientModule,

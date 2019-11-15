@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../authentication.service';
 import {AppService} from '../app.service';
@@ -9,12 +9,12 @@ import {AppService} from '../app.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  username;
+  email;
   password;
   showPassword = 'password';
   private passwordEmpty: boolean;
-  private usernameEmpty: boolean;
-
+  private emailEmpty: boolean;
+  private invalidLogin = false;
 
   constructor(private  service: AppService, private router: Router, private authService:
     // tslint:disable-next-line:align
@@ -31,14 +31,17 @@ export class LoginComponent implements OnInit {
     if (this.password == null) {
       this.passwordEmpty = true;
     }
-    if (this.username == null) {
-      this.usernameEmpty = true;
+    if (this.email == null) {
+      this.emailEmpty = true;
     }
-    this.authService.authenticate(this.username, this.password).subscribe(
+    this.authService.authenticate(this.email, this.password).subscribe(
       (data) => {
         this.service.isLoggedIn(true);
-        alert('you are logged in');
         this.router.navigate(['home']);
+      }, error => {
+        this.invalidLogin = true;
+        this.email = undefined;
+        this.password = undefined;
       });
   }
 
