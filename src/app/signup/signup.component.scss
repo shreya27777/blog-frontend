@@ -33,15 +33,15 @@
 .pos {
   position: absolute;
   left: 15%;
-  top: 10rem;
+  top: 7rem;
 }
 
 .bgf {
   z-index: 1;
-  background-color: #E8F3EC;
+  background-color:#e0f7fa;
 
-  height: 400px;
-  width: 520px;
+  height: 490px;
+  width: 530px;
 }
 
 .card {
@@ -50,4 +50,7 @@
 
 .card:hover {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+.my-color {
+  color: rgba(3, 168, 124, 1);
 }

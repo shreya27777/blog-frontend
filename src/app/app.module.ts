@@ -5,10 +5,8 @@ import {AppRoutingModule, RoutingComponents} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {FooterComponent} from './footer/footer.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { FollowComponent } from './follow/follow.component';
-import { AllPostsofUserComponent } from './all-postsof-user/all-postsof-user.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +14,13 @@ import { AllPostsofUserComponent } from './all-postsof-user/all-postsof-user.com
     RoutingComponents,
     NavbarComponent,
     FooterComponent,
-    FollowComponent,
-    AllPostsofUserComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

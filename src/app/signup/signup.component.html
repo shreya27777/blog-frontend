@@ -6,10 +6,10 @@
   </div>
 
   <div class="pos">
-    <div class="card bgf">
+    <div class="card bgf my-color">
       <div class="d-flex justify-content-center ">
         <div class="p-3  pl-5 pr-5">
-          <form class="text-center">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="text-center">
             <h2 class="text-center mb-4 cm pq">Signup here</h2>
             <div *ngIf="!exists">
               <div class="text-center text-danger pb-2">User already exists</div>
@@ -20,50 +20,90 @@
               <span class="input-group-text "
               > <i class="material-icons ">person</i></span>
                 </div>
-                <input type="text" class="form-control " placeholder="name" [(ngModel)]="name"
-                       [ngModelOptions]="{standalone: true}"/>
+                <input type="text" formControlName="name" class="form-control " placeholder="name" [(ngModel)]="name"
+                       [ngClass]="{'is-invalid':submitted && f.name.errors}"/>
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div *ngIf="f.name.errors.required">Name is required</div>
+                </div>
               </div>
             </div>
-            <div *ngIf="usernameEmpty">
-              <h5 class="text-danger">username is required</h5>
-            </div>
+
 
             <div class="form-group">
               <div class="input-group pt-2">
                 <div class="input-group-prepend">
                   <span class="input-group-text "><i class="material-icons ">email</i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="email" [(ngModel)]="email"
-                       [ngModelOptions]="{standalone: true}"/>
+                <input type="email" formControlName="email" class="form-control" placeholder="email" [(ngModel)]="email"
+                       [ngClass]="{'is-invalid':submitted && f.email.errors}"/>
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Email is required</div>
+                  <div *ngIf="f.email.errors.email">Enter a valid email</div>
+
+                </div>
               </div>
             </div>
-            <div *ngIf="emailEmpty">
-              <h5 class="text-danger">email is required</h5>
+
+
+            <div class="form-group">
+              <div class="input-group pt-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="material-icons">vpn_key</i>
+                  </span>
+                </div>
+                <input type="password" formControlName="password" class="form-control" placeholder="Password"
+                       [(ngModel)]="password"
+                       [ngClass]="{'is-invalid':submitted && f.password.errors}">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+                  <div *ngIf="f.password.errors.minLength">Minimum 6 characters</div>
+                </div>
+              </div>
             </div>
 
             <div class="form-group">
               <div class="input-group pt-2">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="material-icons">vpn_key</i></span>
+                  <span class="input-group-text"><i class="material-icons">phone</i></span>
                 </div>
-                <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password"
-                       [ngModelOptions]="{standalone: true}"/>
+                <input type="mobile" formControlName="mobile" class="form-control" placeholder="Mobile"
+                       [(ngModel)]="mobile"
+                       [ngClass]="{'is-invalid':submitted && f.mobile.errors}"/>
+                <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                  <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+                  <div *ngIf="f.mobile.errors.minLength">Mobile should be 10 letters</div>
+                  <div *ngIf="f.mobile.errors.maxLength">Mobile should be 10 letters</div>
+                  <div *ngIf="f.mobile.errors.pattern">Mobile should only contain letters</div>
+                </div>
               </div>
             </div>
-            <div *ngIf="passwordEmpty">
-              <h5 class="text-danger">password is required</h5>
+
+
+            <div class="form-group">
+              <div class="input-group pt-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="material-icons">assignment</i></span>
+                </div>
+                <input type="bio" formControlName="bio" class="form-control" placeholder="Bio" [(ngModel)]="bio"
+                       [ngClass]="{'is-invalid':submitted && f.bio.errors}"/>
+                <div *ngIf="submitted && f.bio.errors" class="invalid-feedback">
+                  <div *ngIf="f.bio.errors.required">Bio is required</div>
+                </div>
+              </div>
             </div>
 
+
             <button
-              type="button"
-              class="btn btn-outline-danger form-control mt-2" (click)="Signupdata()">Signup
+              type="submit"
+              class="btn btn-outline-dark form-control mt-2">Signup
             </button>
           </form>
         </div>
       </div>
       <div class="text-center container mt-2 text-decoration-none">
-        Already have an account?
-        <a routerLink="/login">Login</a> here!
+        <h6>Already have an account?
+          <a routerLink="/login">Login</a> here!</h6>
       </div>
     </div>
   </div>

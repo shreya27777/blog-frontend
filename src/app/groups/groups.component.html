@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="text-center">Groups</div>
+<div class="form-inline">
+  <label class="custom-control-label" for="name">Group Name:</label>
+  <input type="text" class="form-control pr-3" name="name" id="name" [(ngModel)]="name">
+  <button type="submit" class="btn btn-primary" (click)="create()">Create Group</button>
+</div>
+<div class="card my-cursor" *ngFor="let group of groups">
+  <div class="card-body">
+    <div (click)="navigate(group.userGroups.id)">
+      Group Name: {{group.userGroups.name}}
+    </div>
+    <div (click)="navigate(group.userGroups.id)">
+      Owner: {{group.userGroups.owner.name}}
+    </div>
+    <div (click)="navigate(group.userGroups.id)">
+      Size: {{group.userGroups.size}}
+    </div>
+<!--    <div>-->
+<!--      <button class="btn btn-danger" (click)="delete(group.userGroups.id)">Delete</button>-->
+<!--    </div>-->
+  </div>
+</div>
+<app-footer></app-footer>

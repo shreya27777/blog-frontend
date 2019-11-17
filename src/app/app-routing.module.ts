@@ -13,6 +13,8 @@ import {SearchComponent} from './search/search.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {FollowComponent} from './follow/follow.component';
 import {AllPostsofUserComponent} from './all-postsof-user/all-postsof-user.component';
+import {GroupsComponent} from './groups/groups.component';
+import {GroupDetailsComponent} from './group-details/group-details.component';
 
 
 const routes: Routes = [
@@ -29,6 +31,8 @@ const routes: Routes = [
   {path: 'search/:q' , component: SearchComponent},
   {path: 'follow' , component: FollowComponent},
   {path: 'allPostOfUser/:id' , component: AllPostsofUserComponent},
+  {path: 'groups' , component: GroupsComponent},
+  {path: 'group-details/:id' , component: GroupDetailsComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -41,5 +45,5 @@ export class AppRoutingModule {
 
 export const RoutingComponents = [LoginComponent, SignupComponent, HomeComponent, AddPostComponent, MyProfileComponent,
   NewsFeedComponent, PostDetailsComponent , MyPostsComponent , EditPostComponent , SearchComponent , PageNotFoundComponent
-  , FollowComponent , AllPostsofUserComponent
+  , FollowComponent , AllPostsofUserComponent, GroupsComponent, GroupDetailsComponent
 ];
